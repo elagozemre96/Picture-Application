@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Finding App</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f4e38e
+    }
+    .title{
+        color: #7676D8;
+    }
+    .container {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+
+      align-items: center;
+    }
+    .row-1 {
+      margin-top: 20px;
+      align-items: center;
+      margin: 0;
+    }
+    #inputElement {
+      border-radius: 7px;
+      padding: 10px;
+      border: 3px solid #7676D8;
+      width: 400px;
+      margin-top: 10px;
+    }
+    .row {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .row-2 {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      justify-content: space-between;
+      width: 400px;
+    }
+
+    .row-2 > button:last-child {
+      margin-right: 0;
+    }
+    button {
+      padding: 5px;
+      width: 150px;
+      border-radius: 5px;
+    }
+    #search {
+      background-color: #7676D8;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+      cursor: pointer;
+    }
+    #clear {
+      background-color: red;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+      cursor: pointer;
+    }
+
+    #search:hover {
+      background-color: rgb(62, 62, 186);
+    }
+    #clear:hover {
+      background-color: rgb(212, 93, 8);
+    }
+    .image-container {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1 class="title">Image Finding Application</h1>
+      <div class="row-1">
+        <input id="inputElement" type="text" placeholder="Find the picture.." />
+      </div>
+      <div class="row-2">
+        <button id="search" class="button">Search</button>
+        <button id="clear" class="button">Clear</button>
+      </div>
+      <div class="image-container"></div>
+    </div>
+  </body>
+  <script src="API.JS"></script>
+  <script src="main.js"></script>
+</html>
